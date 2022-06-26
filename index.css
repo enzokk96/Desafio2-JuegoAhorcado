@@ -1,0 +1,288 @@
+body {
+    margin: 30px;
+    padding: 0;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 80vh;
+}
+#palabra{
+position: relative;
+justify-content: center;
+align-content: center;
+width: 299px;
+height: 48px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 150%;
+color: #0A3871;
+}
+#inicio{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 95vh;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.boton_iniciar{
+display: flex;
+flex-direction: row;
+align-items: center;
+
+justify-content: center;
+gap: 8px;
+position: relative;
+width: 280px;
+height: 114px;
+
+background: #0A3871;
+border-radius: 24px;
+}
+
+.boton_agregar_palabra{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+box-sizing: border-box;
+flex-direction: row;
+gap: 8px;
+position: relative;
+width: 280px;
+height: 67px;
+border: 1px solid #0A3871;
+border-radius: 24px;
+}
+
+.boton_nuevo_juego{
+display: row;
+flex-direction: row;
+align-items: flex-start;
+padding: 24px;
+gap: 8px;
+
+width: 332px;
+height: 67px;
+background: #0A3871;
+border-radius: 24px;
+flex: none;
+order: 0;
+flex-grow: 1;
+}
+
+.boton_cancelar{
+    box-sizing: border-box;
+    display: row;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 332px;
+    height: 67px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+
+}
+
+.boton_guardar{
+
+display: row;
+flex-direction: row;
+align-items: flex-start;
+padding: 24px;
+gap: 8px;
+width: 332px;
+height: 67px;
+background: #0A3871;
+border-radius: 24px;
+flex: none;
+order: 0;
+flex-grow: 1;
+}
+
+.boton_desistir{
+box-sizing: border-box;
+display: row;
+flex-direction: row;
+align-items: flex-start;
+padding: 24px;
+gap: 8px;
+width: 332px;
+height: 67px;
+border: 1px solid #0A3871;
+border-radius: 24px;
+flex: none;
+order: 1;
+flex-grow: 1;
+}
+
+.letra-correcta{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 150%;
+text-align: center;
+color: #0A3871;
+height: 50px;
+margin: 0;
+margin-bottom: 8px;
+
+}
+
+#prueba, .botones-agregar {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    bottom: 0;
+}
+.botones-agregar{
+    display: flex;
+}
+.palabra-correcta{
+    display: flex;
+    justify-content: center;
+    margin: 0 4px 30px 4px;
+    gap: 10px;
+}
+#nuevo-juego-desistir {
+    display: flex;
+    justify-content: center;
+}
+
+/* .letra-correcta{
+    margin: 0;
+} */
+#ahorcado{
+    height: 100px;
+    width: 20px;
+}
+#piso{
+    position: absolute;
+width: 294px;
+height: 5px;
+left: 50%;
+transform: translate(-50%, -50%);
+top: 410px;
+
+}
+#fallo1{
+    position: absolute;
+width: 4.5px;
+height: 360px;
+left: 50%;
+top: 57px;
+
+}
+#fallo2{
+    position: absolute;
+width: 177.75px;
+height: 4.5px;
+left: 50%;
+top: 55px;
+
+
+}
+#fallo3{
+    position: absolute;
+width: 4.5px;
+height: 49.5px;
+left: 66.9%;
+top: 55px;
+
+
+
+
+}
+#fallo4{
+
+position: absolute;
+width: 63px;
+height: 63px;
+left: 64%;
+top: 100px;
+
+
+}
+#fallo5{
+    position: absolute;
+
+    left: 67%;
+top: 163px;
+
+}
+#fallo6{
+    position: absolute;
+
+    left: 63%;
+top: 161.88px;
+}
+#fallo7{
+    position: absolute;
+    left: 67.8%;
+top: 161.88px;
+}
+#fallo9{
+    position: absolute;
+
+    left: 63%;
+top: 294.62px;
+}
+#fallo8{
+    position: absolute;
+
+    left: 67.8%;
+top: 294.62px;
+
+
+}
+
+.modalContainer {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalContainer .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-top: 10px solid #58abb7;
+    width: 60%;
+}
+
+.modalContainer .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modalContainer .close:hover,
+.modalContainer .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
